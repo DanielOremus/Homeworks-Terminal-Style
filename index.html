@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/terminal.css" />
+    <script src="https://cdn.jsdelivr.net/npm/figlet@1.7.0/lib/figlet.min.js"></script>
+    <script src="./js/commands.js"></script>
+    <script src="./js/hws-main.js"></script>
+    <script defer src="./js/terminal.js"></script>
+    <script defer src="./js/fontloader.js"></script>
+  </head>
+  <body>
+    <div id="title"></div>
+    <div id="desc">
+      Welcome to My Terminal. Do not user cursor, it can cause different bugs. I
+      recommend to proceed with arrow keys, when interacting. Type "help" to see
+      list of commands.
+    </div>
+    <div id="terminal" onclick="document.getElementById('textarea').focus()">
+      <div id="result-lines-container"></div>
+      <div>
+        <textarea
+          id="textarea"
+          autofocus
+          onkeydown="  moveCursor(this.value.length, this.selectionStart, event)"
+          oninput="changeText(this, event)"
+        ></textarea>
+      </div>
+      <div id="command-line">
+        <span id="type-line"></span>
+        <span id="cursor" class="cmd-cursor">&nbsp;</span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+  margin: 3rem;
+  background-color: black;
+  color: #aaa;
+  font-size: larger;
+  font-family: monospace;
+}
+.condition {
+  font-size: 1.2rem;
+}
+button,
+button:focus {
+  color: #aaa;
+  background: none;
+  border-style: solid;
+  outline: none;
+}
+input {
+  border-radius: 0;
+  border: 0.5px solid #aaa;
+  background-color: black;
+  color: #aaa;
+  outline: none;
+}
+
+#task {
+  white-space: pre;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/task5.css" />
+    <link rel="stylesheet" href="../../styles/interaction.css" />
+
+    <link rel="stylesheet" href="./styles/task2.css" />
+    <script src="https://cdn.jsdelivr.net/npm/figlet@1.7.0/lib/figlet.min.js"></script>
+
+    <script src="./js/script.js"></script>
+    <script defer src="../../js/interact.js"></script>
+    <script defer src="../../js/fontloader.js"></script>
+  </head>
+  <body>
+    <div id="task"></div>
+
+    <div class="condition">
+      Task 5. З клавіатури вводиться назва категорії водія (А-мотоцикл,
+      В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран назву
+      транспортного засобу, яким він може керувати. дня.
+    </div>
+
+    <div class="container">
+      <div class="container-item">
+        <label>Категорія водія: </label>
+        <input type="text" class="interactive" />
+      </div>
+    </div>
+
+    <div class="container-item">
+      <button class="interactive" onclick="showVehicle()">
+        [SHOW AVAILABLE VEHICLE]
+      </button>
+
+      <a href="../index.html">
+        <button class="interactive">[GO TO HW2 PAGE]</button>
+      </a>
+    </div>
+  </body>
+</html>

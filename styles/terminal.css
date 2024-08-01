@@ -1,0 +1,57 @@
+:root {
+  --font-size: 1rem;
+}
+
+body {
+  background-color: black;
+  color: #aaa;
+  font-family: monospace;
+  font-size: var(--font-size);
+}
+textarea {
+  position: absolute;
+  left: -1000px;
+}
+#desc {
+  max-width: 70%;
+}
+#title {
+  white-space: pre;
+}
+#command-line::before {
+  content: "root:~$ ";
+  white-space: pre;
+}
+#command-line {
+  display: inline-flex;
+  line-height: 1.3em;
+}
+
+@keyframes blink {
+  50% {
+    color: black;
+    background-color: #aaa;
+  }
+}
+
+#type-line {
+  line-height: 1.3em;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: pre;
+}
+
+#terminal {
+  margin-top: 10px;
+}
+p {
+  margin: 10px auto;
+  white-space: pre;
+}
+
+.cmd-cursor {
+  animation: blink 1s step-start infinite;
+  overflow: hidden;
+
+  color: #aaa;
+}

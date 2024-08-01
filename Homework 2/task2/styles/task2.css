@@ -1,0 +1,12 @@
+.container {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container-item:not(:last-child) {
+  display: flex;
+  max-width: 35%;
+  gap: 6px;
+  justify-content: space-between;
+}

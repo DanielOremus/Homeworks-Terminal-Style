@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/task.css" />
+    <link rel="stylesheet" href="../../styles/interaction.css" />
+
+    <link rel="stylesheet" href="./styles/task1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/figlet@1.7.0/lib/figlet.min.js"></script>
+
+    <script src="./js/script.js"></script>
+    <script defer src="../../js/interact.js"></script>
+    <script defer src="../../js/fontloader.js"></script>
+  </head>
+  <body>
+    <div id="task"></div>
+
+    <div class="condition">
+      Task 1. З клавіатури вводяться імена двох дітей та кількість у них
+      цукерок. Вивести не екран ім’я тієї дитини, у якої кількість цукерок є
+      більшою, або вивести, що кількість однакова.
+    </div>
+    <div class="container">
+      <div class="container-item">
+        <div>
+          <label>Ім'я 1 дитини: </label>
+          <input type="text" class="interactive child-name" />
+        </div>
+        <div>
+          <label>Кількість цукерок у 1 дитини: </label>
+          <input type="text" class="interactive candy-number" />
+        </div>
+      </div>
+
+      <div class="container-item">
+        <div>
+          <label>Ім'я 2 дитини: </label>
+          <input type="text" class="interactive child-name" />
+        </div>
+        <div>
+          <label>Кількість цукерок у 2 дитини: </label>
+          <input type="text" class="interactive candy-number" />
+        </div>
+      </div>
+      <div class="container-item">
+        <button class="interactive" onclick="showName()">[DISPLAY NAME]</button>
+
+        <a href="../index.html">
+          <button class="interactive">[GO TO HW2 PAGE]</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

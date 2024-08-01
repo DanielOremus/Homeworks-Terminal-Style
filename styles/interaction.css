@@ -1,0 +1,6 @@
+.active,
+.active:active,
+.active:focus {
+  background-color: #aaa;
+  color: black;
+}

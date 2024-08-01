@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/task.css" />
+    <link rel="stylesheet" href="../../styles/interaction.css" />
+
+    <link rel="stylesheet" href="./styles/task4.css" />
+    <script src="https://cdn.jsdelivr.net/npm/figlet@1.7.0/lib/figlet.min.js"></script>
+
+    <script src="./js/script.js"></script>
+    <script defer src="../../js/interact.js"></script>
+    <script defer src="../../js/fontloader.js"></script>
+  </head>
+  <body>
+    <div id="task"></div>
+    <div class="condition">
+      Task 4. З клавіатури вводиться вік людини. Вивести на екран ким він є
+      (дитиною у садочку, школярем, студентом, працівником, пенсіонером).
+    </div>
+    <div class="container">
+      <div class="container-item">
+        <label>Вік: </label>
+        <input type="text" class="interactive" />
+      </div>
+
+      <div class="container-item">
+        <button class="interactive" onclick="showCategory()">
+          [SHOW CATEGORY]
+        </button>
+
+        <a href="../index.html">
+          <button class="interactive">[GO TO HW2 PAGE]</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
