@@ -39,7 +39,7 @@ const commands = [
     hasArg: false,
     func: (command) => {
       addUserCommandLine(command);
-      for (let i = 0; i < tasksCount; i++) {
+      for (let i = 0; i < tasksArr.length; i++) {
         addTextToShowLine(`- Task ${i + 1}`);
       }
     },

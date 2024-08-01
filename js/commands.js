@@ -40,7 +40,7 @@ const commands = [
     hasArg: false,
     func: (command) => {
       addUserCommandLine(command);
-      for (let i = 0; i < homeworksCount; i++) {
+      for (let i = 0; i < homeworksArr.length; i++) {
         addTextToShowLine(`- Homework ${i + 1}`);
       }
     },
