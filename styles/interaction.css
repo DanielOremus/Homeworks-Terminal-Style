@@ -4,3 +4,10 @@
   background-color: #aaa;
   color: black;
 }
+button.active:disabled {
+  color: black;
+  background-color: #585858;
+}
+input.active:disabled {
+  background-color: #585858;
+}

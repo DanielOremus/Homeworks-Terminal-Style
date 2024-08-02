@@ -1,4 +1,4 @@
-const spacesCount = 15;
+const spacesCount = 15
 const commands = [
   {
     title: "help",
@@ -6,20 +6,20 @@ const commands = [
     desc: "see list of commands",
     hasArg: false,
     func: (command) => {
-      addUserCommandLine(command);
+      addUserCommandLine(command)
       const longestCommandLength = commands.reduce(
         (accumulator, el) =>
           el.title.length > accumulator
             ? (accumulator = el.title.length)
             : accumulator,
         0
-      );
+      )
       for (const obj of commands) {
         addTextToShowLine(
           `${obj.title}` +
             " ".repeat(longestCommandLength - obj.title.length + spacesCount) +
             `${obj.desc}`
-        );
+        )
       }
     },
   },
@@ -29,8 +29,8 @@ const commands = [
     desc: "creator's name",
     hasArg: false,
     func: (command) => {
-      addUserCommandLine(command);
-      addTextToShowLine("Made by Daniel Oremus");
+      addUserCommandLine(command)
+      addTextToShowLine("Made by Daniel Oremus")
     },
   },
   {
@@ -39,9 +39,9 @@ const commands = [
     desc: "see list of homeworks",
     hasArg: false,
     func: (command) => {
-      addUserCommandLine(command);
+      addUserCommandLine(command)
       for (let i = 0; i < homeworksArr.length; i++) {
-        addTextToShowLine(`- Homework ${i + 1}`);
+        addTextToShowLine(`- Homework ${homeworksArr[i]}`)
       }
     },
   },
@@ -51,8 +51,8 @@ const commands = [
     desc: "check homework",
     hasArg: true,
     func: (command, arg) => {
-      addUserCommandLine(command);
-      window.location.href = `./Homework ${arg}/index.html`;
+      addUserCommandLine(command)
+      window.location.href = `./Homework ${arg}/index.html`
     },
   },
-];
+]

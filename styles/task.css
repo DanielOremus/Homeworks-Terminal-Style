@@ -8,6 +8,12 @@ body {
 .condition {
   font-size: 1.2rem;
 }
+button:disabled {
+  outline: none;
+  border-style: none;
+  color: #807e7e;
+}
+
 button,
 button:focus {
   color: #aaa;
@@ -15,6 +21,7 @@ button:focus {
   border-style: solid;
   outline: none;
 }
+
 input {
   border-radius: 0;
   border: 0.5px solid #aaa;
@@ -22,7 +29,9 @@ input {
   color: #aaa;
   outline: none;
 }
-
+input:disabled {
+  border-color: #585858;
+}
 #task {
   white-space: pre;
 }

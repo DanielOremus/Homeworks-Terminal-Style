@@ -1,0 +1,16 @@
+.container {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container-item:not(:last-child) {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  gap: 6px;
+}
+.container-item:not(:last-child) div {
+  display: flex;
+  justify-content: space-between;
+}
