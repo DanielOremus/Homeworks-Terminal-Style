@@ -11,8 +11,8 @@ function onStart() {
     return
   }
   const width = parseInt(inputs[1].value)
-  const heigth = parseInt(inputs[2].value)
-  shipPos = placeShip(width * heigth)
+  const height = parseInt(inputs[2].value)
+  shipPos = placeShip(width * height)
   const elementsToChangeStatus = [
     { element: inputs[1], toDisable: true },
     { element: inputs[2], toDisable: true },
@@ -21,9 +21,8 @@ function onStart() {
     { element: buttons[1], toDisable: false },
     { element: buttons[0], toDisable: true },
   ]
-  for (const obj of elementsToChangeStatus) {
-    changeElementStatus(obj)
-  }
+
+  changeElementsStatus(elementsToChangeStatus)
 }
 function placeShip(maxPos) {
   return 1 + Math.floor(Math.random() * maxPos)
@@ -40,26 +39,24 @@ function onShoot() {
     { element: buttons[1], toDisable: true },
     { element: buttons[0], toDisable: false },
   ]
-  let inputsToClear = elementsToChangeStatus
+  const inputsToClear = elementsToChangeStatus
     .filter((el) => el.element.tagName === "INPUT")
     .map((el) => el.element)
   if (shipPos === userPos) {
     clearInputs(inputsToClear)
-    for (const obj of elementsToChangeStatus) {
-      changeElementStatus(obj)
-    }
+
+    changeElementsStatus(elementsToChangeStatus)
+
     alert("Вітаю, ви вгадали. Можете почати нову гру!")
     return
   } else alert(`Не вгадали, кількість снарядів: ${bulletsNumber}.`)
 
   if (!bulletsNumber) {
-    for (const obj of elementsToChangeStatus) {
-      changeElementStatus(obj)
-    }
-    clearInputs(inputsToClear)
-    //---clearing inputs
+    changeElementsStatus(elementsToChangeStatus)
+
+    clearInputs(inputsToClear) //---clearing inputs
+
     alert(`Снярядів більше нема. Корабель був на ${shipPos} позиції.`)
-    return
   }
 }
 
@@ -70,8 +67,10 @@ function fontLoaded() {
   document.getElementById("task").innerText = render4HTML(asciiTitle)
 }
 
-function changeElementStatus(obj) {
-  obj.toDisable
-    ? obj.element.setAttribute("disabled", "")
-    : obj.element.removeAttribute("disabled")
+function changeElementsStatus(array) {
+  for (const obj of array) {
+    obj.toDisable
+      ? obj.element.setAttribute("disabled", "")
+      : obj.element.removeAttribute("disabled")
+  }
 }
