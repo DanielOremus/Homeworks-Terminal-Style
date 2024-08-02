@@ -24,7 +24,7 @@
         <textarea
           id="textarea"
           autofocus
-          onkeydown="  moveCursor(this.value.length, this.selectionStart, event)"
+          onkeyup="  moveCursor(this.value.length, this.selectionStart, event)"
           oninput="changeText(this, event)"
         ></textarea>
       </div>

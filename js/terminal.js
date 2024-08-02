@@ -176,6 +176,7 @@ function moveCursor(charactersNumber, cursorPos, event) {
         let textSpans = getTextSpans()
         textSpans.forEach((el) => el.removeAttribute("class"))
         cursor.removeAttribute("class")
+        console.log("Cursor pos" + cursorPos)
 
         if (cursorPos === charactersNumber) {
           //Is cursor in the end?
@@ -188,6 +189,7 @@ function moveCursor(charactersNumber, cursorPos, event) {
         //---------------------------------------------------------------------------
 
         let cursorSpan = textSpans[cursorPos]
+        console.log(cursorSpan)
 
         cursorSpan.setAttribute("class", "cmd-cursor")
       }
