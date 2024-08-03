@@ -5,7 +5,12 @@ function fontLoaded() {
 }
 
 function display() {
-  const paragraphNumber = document.querySelector("input").value
+  const paragraphNumber =
+    parseInt(document.querySelector("input").value) || null
+  if (!paragraphNumber || paragraphNumber < 0) {
+    alert("Помилка, введіть коректне число!")
+    return
+  }
   const container = document.getElementsByClassName("container-item")[2]
   container.innerText = ""
   for (let i = 1; i <= paragraphNumber; i++) {

@@ -5,13 +5,21 @@ const inputs = document.querySelectorAll("input")
 const buttons = document.querySelectorAll("button")
 
 function onStart() {
-  bulletsNumber = inputs[0].value
-  if (!bulletsNumber) {
-    alert("Введіть коректне число")
-    return
-  }
+  bulletsNumber = parseInt(inputs[0].value)
   const width = parseInt(inputs[1].value)
   const height = parseInt(inputs[2].value)
+  if (
+    !bulletsNumber ||
+    bulletsNumber < 0 ||
+    !width ||
+    width < 0 ||
+    !height ||
+    height < 0
+  ) {
+    alert("Введіть коректні числа")
+    return
+  }
+
   shipPos = placeShip(width * height)
   const elementsToChangeStatus = [
     { element: inputs[1], toDisable: true },

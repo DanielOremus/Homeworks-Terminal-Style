@@ -11,12 +11,12 @@
     <script defer src="../js/terminal.js"></script>
     <script defer src="../js/fontloader.js"></script>
   </head>
-  <body>
+  <body onclick="document.getElementById('textarea').focus()">
     <div id="title"></div>
     <div id="desc">
       It's Homework 5 Page. Type "help" to see list of commands.
     </div>
-    <div id="terminal" onclick="document.getElementById('textarea').focus()">
+    <div id="terminal">
       <div id="result-lines-container"></div>
       <div>
         <textarea
