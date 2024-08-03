@@ -1,0 +1,17 @@
+.container {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container-item div:has(img) {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+img {
+  width: 250px;
+  border: 5px solid rgb(107, 107, 107);
+}

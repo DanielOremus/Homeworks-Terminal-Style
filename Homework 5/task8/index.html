@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/task.css" />
+    <link rel="stylesheet" href="../../styles/interaction.css" />
+
+    <link rel="stylesheet" href="./styles/task8.css" />
+    <script src="https://cdn.jsdelivr.net/npm/figlet@1.7.0/lib/figlet.min.js"></script>
+
+    <script src="./js/script.js"></script>
+    <script defer src="../../js/interact.js"></script>
+    <script defer src="../../js/fontloader.js"></script>
+  </head>
+  <body>
+    <div id="task"></div>
+
+    <div class="condition">
+      Task 8. Користувач загадує число. За 3 спроби комп’ютер намагається
+      вгадати число користувача (використати confirm).
+    </div>
+
+    <div class="container">
+      <div class="container-item">
+        <div>
+          <label for="">Мінімальне число: </label>
+          <input type="text" class="interactive" />
+        </div>
+      </div>
+      <div class="container-item">
+        <div>
+          <label for="">Максимальне число: </label>
+          <input type="text" class="interactive" />
+        </div>
+      </div>
+      <div class="container-item">
+        <button class="interactive" onclick="onStart()">[NEW GAME]</button>
+        <a href="../index.html">
+          <button class="interactive">[GO TO HW5 PAGE]</button>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

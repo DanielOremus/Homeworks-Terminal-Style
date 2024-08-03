@@ -1,2 +1,2 @@
 const title = "HOMEWORK 5"
-const tasksArr = [-2, -1, 13, 8].sort((a, b) => a - b)
+const tasksArr = [-2, 7, 13, 8, 12].sort((a, b) => a - b)

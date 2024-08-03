@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="../../styles/task.css" />
     <link rel="stylesheet" href="../../styles/interaction.css" />
 
-    <link rel="stylesheet" href="./styles/task-1.css" />
+    <link rel="stylesheet" href="./styles/task7.css" />
     <script src="https://cdn.jsdelivr.net/npm/figlet@1.7.0/lib/figlet.min.js"></script>
 
-    <script src="./js/script.js"></script>
+    <script defer src="./js/script.js"></script>
     <script defer src="../../js/interact.js"></script>
     <script defer src="../../js/fontloader.js"></script>
   </head>
@@ -18,19 +18,22 @@
     <div id="task"></div>
 
     <div class="condition">
-      Task -1. Вивести на екран номери місяців весни і літа (від 3 до 8)
+      Task 7. Вивести на екран N абзаців (N вводиться користувачем) за зразком
     </div>
 
     <div class="container">
       <div class="container-item">
-        <button class="interactive" onclick="display()">
-          [DISPLAY MONTHS]
-        </button>
+        <label for="">Кількість абзаців: </label>
+        <input type="text" class="interactive" />
+      </div>
+
+      <div class="container-item">
+        <button class="interactive" onclick="display()">[DISPLAY]</button>
         <a href="../index.html">
           <button class="interactive">[GO TO HW5 PAGE]</button>
         </a>
-        <div class="container-item"></div>
       </div>
+      <div class="container-item"></div>
     </div>
   </body>
 </html>
