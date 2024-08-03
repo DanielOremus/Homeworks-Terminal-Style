@@ -1,4 +1,4 @@
-const spacesCount = 15;
+const spacesCount = 15
 const commands = [
   {
     title: "help",
@@ -6,20 +6,20 @@ const commands = [
     desc: "see list of commands",
     hasArg: false,
     func: (command) => {
-      addUserCommandLine(command);
+      addUserCommandLine(command)
       const longestCommandLength = commands.reduce(
         (accumulator, el) =>
           el.title.length > accumulator
             ? (accumulator = el.title.length)
             : accumulator,
         0
-      );
+      )
       for (const obj of commands) {
         addTextToShowLine(
           `${obj.title}` +
             " ".repeat(longestCommandLength - obj.title.length + spacesCount) +
             `${obj.desc}`
-        );
+        )
       }
     },
   },
@@ -29,7 +29,7 @@ const commands = [
     desc: "go to previous page",
     hasArg: false,
     func: () => {
-      window.location.href = `../index.html`;
+      window.location.href = `../index.html`
     },
   },
   {
@@ -38,9 +38,9 @@ const commands = [
     desc: "see list of tasks",
     hasArg: false,
     func: (command) => {
-      addUserCommandLine(command);
-      for (let i = 0; i < tasksCount; i++) {
-        addTextToShowLine(`- Task ${i + 1}`);
+      addUserCommandLine(command)
+      for (let i = 0; i < tasksArr.length; i++) {
+        addTextToShowLine(`- Task ${tasksArr[i]}`)
       }
     },
   },
@@ -50,7 +50,7 @@ const commands = [
     desc: "check task",
     hasArg: true,
     func: (command, arg) => {
-      window.location.href = `./task${arg}/index.html`;
+      window.location.href = `./task${arg}/index.html`
     },
   },
-];
+]
