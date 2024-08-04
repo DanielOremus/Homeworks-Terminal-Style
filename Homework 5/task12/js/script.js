@@ -34,7 +34,7 @@ function onSpin() {
   }
   setTimeout(() => {
     showResult(idOfCurrentSlots)
-  }, 100)
+  }, 500)
 }
 
 function showResult(idArray) {
